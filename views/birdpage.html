@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h3>{{ bird.name }}
+    <small> (<a href="{{ bird.route }}/similar">Similar</a>)</small>
+</h3>
+<h4>by <a href="/bird/{{ bird.name }}">{{ bird.name }}</a></h4>
+<hr/>
+<div class="page-body">Breed: {{ bird.breed }}</div>
+<div class="page-body">Favorite Color: {{ bird.favoriteColor }}</div>
+<div class="page-body">Favorite Number: {{ bird.favoriteNumber }}</div>
+<div class="page-body">Bird Name: {{ bird.birdName }}</div>
+<hr/>
+<a href="{{ bird.route }}/edit" class="btn btn-primary">edit this bird</a>
+<a href="{{ bird.route }}/delete" class="btn btn-danger">delete this bird</a>
+{% endblock %}

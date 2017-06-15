@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h3>Birds</h3>
+<hr>
+<ul class="list-unstyled">
+    <ul>
+        {% for bird in birds %}
+        <li>
+            <a href="/bird/{{ bird.name }}">{{ bird.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</ul>
+{% endblock %}

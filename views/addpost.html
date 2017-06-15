@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3>Add A Post</h3>
+  <hr>
+  <form method="POST" action="/bird/:name/post">
+
+    <div class="form-group">
+      <label for="body" class="col-sm-2 control-label">Body</label>
+      <div class="col-sm-10">
+        <input name="body" type="text" class="form-control"/>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="imageURL" class="col-sm-2 control-label">Image URL</label>
+      <div class="col-sm-10">
+        <input name="imageURL" type="text" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="author" class="col-sm-2 control-label">Author</label>
+      <div class="col-sm-10">
+        <input name="author" type="text" class="form-control"/>
+      </div>
+    </div>
+    <!--<div class="form-group">
+      <label for="friends" class="col-sm-2 control-label">Friends</label>
+      <div class="col-sm-10">
+        <textarea name="friends"></textarea>
+      </div>
+    </div>-->
+
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Add Post</button>
+    </div>
+
+  </form>
+{% endblock %}
